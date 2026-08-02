@@ -20,7 +20,7 @@ export default function Footer() {
             </p>
             <p className="footer-links">
               <a
-                href="https://waze.com/ul?q=אלקלעי%201%20תל%20אביב"
+                href="https://waze.com/ul?ll=32.0909639,34.7795864&navigate=yes"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -28,7 +28,7 @@ export default function Footer() {
               </a>
               <span aria-hidden="true">·</span>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=%D7%90%D7%9C%D7%A7%D7%9C%D7%A2%D7%99+1+%D7%AA%D7%9C+%D7%90%D7%91%D7%99%D7%91"
+                href="https://www.google.com/maps/place/Elkalai/@32.0908173,34.7794991,101m/data=!3m1!1e3!4m15!1m8!3m7!1s0x151d4b8b57ff2071:0xd3038414e726c15d!2sElkalai+St+1,+Tel+Aviv-Jaffa,+6274201!3b1!8m2!3d32.0909639!4d34.7795864!16s%2Fg%2F11rr6d0rv1!3m5!1s0x151d4b8b580f0087:0x7694b7f5aafaa823!8m2!3d32.0909639!4d34.7795864!16s%2Fg%2F1tf0sv_w"
                 target="_blank"
                 rel="noopener noreferrer"
               >

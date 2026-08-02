@@ -279,26 +279,17 @@ section {
 }
 
 .nav-brand img {
-  width: 42px;
-  height: 42px;
+  width: 84px;
+  height: 84px;
   border-radius: 50%;
   object-fit: cover;
   background: var(--paper);
+  transition: width 0.4s ease, height 0.4s ease;
 }
 
-.nav-brand b {
-  font-family: var(--font-display);
-  font-size: 1.08rem;
-  font-weight: 500;
-  display: block;
-  line-height: 1.3;
-}
-
-.nav-brand small {
-  display: block;
-  font-size: 0.66rem;
-  letter-spacing: 0.2em;
-  opacity: 0.9;
+.nav.scrolled .nav-brand img {
+  width: 60px;
+  height: 60px;
 }
 
 .nav-link {
@@ -888,6 +879,14 @@ section {
   }
   .nav-links a:not(.btn) {
     display: none;
+  }
+  .nav-brand img {
+    width: 64px;
+    height: 64px;
+  }
+  .nav.scrolled .nav-brand img {
+    width: 48px;
+    height: 48px;
   }
   .why-row {
     grid-template-columns: 46px 1fr;
