@@ -42,7 +42,7 @@ export default function LeadForm() {
       return
     }
 
-    const text = `היי, מעוניין/ת לחגוג אצלכם באלקלעי 1. שם: ${name.trim()}, טלפון: ${phone.trim()}`
+    const text = `היי, מעוניין/ת לחגוג אצלכם בקפה אלקלעי. שם: ${name.trim()}, טלפון: ${phone.trim()}`
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`
     const win = window.open(url, '_blank', 'noopener')
     setWaUrl(url)
@@ -58,7 +58,7 @@ export default function LeadForm() {
           <h2>השאירו פרטים — ונחזור אליכם</h2>
           <p className="lead">
             שם ומספר טלפון, זה הכל. נתקשר, נשמע מה חוגגים, כמה אתם ומתי — ונבנה יחד
-            את השבת שלכם באלקלעי 1.
+            את השבת שלכם בקפה אלקלעי.
           </p>
           <p className="contact-line">
             ממהרים? התקשרו אלינו ל־<a href="tel:036041260">03-6041260</a>

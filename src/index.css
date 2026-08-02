@@ -246,27 +246,6 @@ section {
   border-bottom: 1px solid transparent;
 }
 
-/* סקרים לניווט לפני גלילה. בלי זה הטקסט הלבן יושב על התמונה עצמה
-   והניגודיות תלויה בפיקסל — נפילה של 1.4.3. */
-.nav::before {
-  content: '';
-  position: absolute;
-  inset-inline: 0;
-  top: 0;
-  height: 190%;
-  background: linear-gradient(
-    to bottom,
-    rgba(20, 12, 8, 0.72) 0%,
-    rgba(20, 12, 8, 0.42) 55%,
-    rgba(20, 12, 8, 0) 100%
-  );
-  pointer-events: none;
-  transition: opacity 0.4s ease;
-}
-
-.nav.scrolled::before {
-  opacity: 0;
-}
 
 .nav-inner {
   position: relative;
@@ -296,11 +275,6 @@ section {
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  color: #fff;
-  transition: color 0.4s ease;
-}
-
-.nav.scrolled .nav-brand {
   color: var(--ink);
 }
 
@@ -345,11 +319,6 @@ section {
   display: flex;
   align-items: center;
   gap: 34px;
-  color: #fff;
-  transition: color 0.4s ease;
-}
-
-.nav.scrolled .nav-links {
   color: var(--ink);
 }
 
@@ -358,73 +327,27 @@ section {
   font-size: 0.76rem;
 }
 
-.nav.scrolled .nav-links .btn-primary {
-  color: #fff;
-}
-
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  padding: 0;
-  min-height: 100svh;
-  display: flex;
-  align-items: flex-end;
-  color: #fff;
-  overflow: hidden;
-}
-
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background-image: url('/assets/event-10.jpg');
-  background-size: cover;
-  background-position: center 46%;
-  transform: scale(1.06);
-  animation: heroDrift 22s ease-out forwards;
-}
-
-@keyframes heroDrift {
-  to {
-    transform: scale(1);
-  }
-}
-
-.hero-bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-      to top,
-      rgba(20, 12, 8, 0.94) 0%,
-      rgba(20, 12, 8, 0.78) 40%,
-      rgba(20, 12, 8, 0.5) 74%,
-      rgba(20, 12, 8, 0.62) 100%
-    );
+  padding: 0 0 96px;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 1;
   width: 100%;
-  padding: 132px 32px 88px;
+  padding: 148px 32px 0;
   max-width: 1160px;
   margin: 0 auto;
 }
 
 .hero-content h1 {
-  color: #fff;
-  max-width: 15ch;
+  max-width: 20ch;
   margin-bottom: 26px;
 }
 
 .hero-content .lead {
-  color: rgba(255, 255, 255, 0.86);
   max-width: 52ch;
   font-size: 1.16rem;
-}
-
-.hero .eyebrow {
-  color: rgba(255, 255, 255, 0.72);
 }
 
 .hero-actions {
@@ -434,23 +357,13 @@ section {
   margin-top: 34px;
 }
 
-.hero .btn-ghost {
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.45);
-}
-
-.hero .btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: #fff;
-}
-
 .hero-facts {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   padding: 26px 0 0;
   margin: 44px 0 0;
-  border-top: 1px solid var(--hair-light);
+  border-top: 1px solid var(--hair);
   gap: 0;
 }
 
@@ -458,7 +371,7 @@ section {
   flex: 1 1 0;
   min-width: 140px;
   padding-inline-start: 26px;
-  border-inline-start: 1px solid var(--hair-light);
+  border-inline-start: 1px solid var(--hair);
 }
 
 .hero-facts li:first-child {
@@ -476,7 +389,30 @@ section {
 .hero-facts span {
   font-size: 0.76rem;
   letter-spacing: 0.16em;
-  color: rgba(255, 255, 255, 0.88);
+  color: var(--ink-soft);
+}
+
+/* שלוש תמונות מתחת לכותרת במקום תמונת רקע */
+.hero-strip {
+  list-style: none;
+  padding: 0 32px;
+  margin: 54px auto 0;
+  max-width: 1160px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.hero-strip li {
+  margin: 0;
+}
+
+.hero-strip img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 2px;
 }
 
 /* ---------- section headers ---------- */
@@ -563,7 +499,7 @@ section {
   padding: 17px 0;
   border-bottom: 1px solid var(--hair);
   display: grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: minmax(120px, max-content) 1fr;
   gap: 18px;
   align-items: baseline;
 }
@@ -904,10 +840,6 @@ section {
     transform: none;
     transition: none;
   }
-  .hero-bg {
-    animation: none;
-    transform: none;
-  }
   html {
     scroll-behavior: auto;
   }
@@ -942,6 +874,7 @@ section {
   }
   .container,
   .hero-content,
+  .hero-strip,
   .nav-inner {
     padding-inline: 22px;
   }
@@ -1014,13 +947,21 @@ section {
     display: none;
   }
   .hero {
-    min-height: 92svh;
+    padding-bottom: 60px;
   }
   .hero-content {
-    padding-bottom: 66px;
+    padding-top: 116px;
   }
   .hero-actions .btn {
     flex: 1 1 100%;
+  }
+  .hero-strip {
+    grid-template-columns: 1fr;
+    margin-top: 38px;
+    gap: 10px;
+  }
+  .hero-strip img {
+    aspect-ratio: 16 / 10;
   }
   .menu-list li {
     grid-template-columns: 1fr;

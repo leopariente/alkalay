@@ -1,24 +1,29 @@
 const FACTS = [
-  { value: 'עד 50', label: 'אורחים' },
+  { value: 'עד 60', label: 'אורחים' },
   { value: 'שבת', label: 'בוקר · צהריים · ערב' },
   { value: 'פנים וחוץ', label: 'ישיבה ועמידה' },
-  { value: 'חניון', label: 'צמוד לבית הקפה' },
+  { value: 'חניון', label: 'חניון בזל הסמוך' },
+]
+
+const PHOTOS = [
+  {
+    src: '/assets/event-10.jpg',
+    alt: 'דלי קרח עם בקבוקי יין ופרוסקו באירוע בקפה אלקלעי',
+    eager: true,
+  },
+  { src: '/assets/event-4.jpg', alt: 'אורחים באירוע ערב בחצר בית הקפה' },
+  { src: '/assets/event-8.jpg', alt: 'אווירת מסיבה בקפה אלקלעי' },
 ]
 
 export default function Hero() {
   return (
     <section className="hero" id="top">
-      <div
-        className="hero-bg"
-        role="img"
-        aria-label="דלי קרח עם בקבוקי יין ופרוסקו באירוע בבית קפה אלקלעי 1"
-      />
       <div className="hero-content">
-        <span className="eyebrow">אלקלעי 1 · תל אביב</span>
-        <h1>חוגגים אצלנו בשבת.</h1>
+        <span className="eyebrow">קפה אלקלעי · תל אביב</span>
+        <h1>אירועים פרטיים עד 60 איש אצלנו בקפה אלקלעי בשבת</h1>
         <p className="lead">
-          בית קפה שכונתי בלב תל אביב שהופך ליום אחד לאירוע פרטי משלכם. תפריט שנבנה
-          יחד איתכם, יין ובירה מהחבית, וחניון ממש בכניסה.
+          אם אתם מחפשים את האירוע האינטימי והלא פורמלי — כזה שבו האורחים מרגישים
+          בבית מהרגע הראשון — נשמח לארח אתכם אצלנו בשבת.
         </p>
         <div className="hero-actions">
           <a className="btn btn-primary" href="#leadform">
@@ -37,6 +42,17 @@ export default function Hero() {
           ))}
         </ul>
       </div>
+      <ul className="hero-strip">
+        {PHOTOS.map((photo) => (
+          <li key={photo.src}>
+            <img
+              src={photo.src}
+              alt={photo.alt}
+              loading={photo.eager ? 'eager' : 'lazy'}
+            />
+          </li>
+        ))}
+      </ul>
     </section>
   )
 }

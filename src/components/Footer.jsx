@@ -4,9 +4,9 @@ export default function Footer() {
       <div className="container">
         <div className="footer-inner">
           <div>
-            <img src="/assets/logo.jpg" alt="לוגו אלקלעי 1" />
+            <img src="/assets/logo.jpg" alt="לוגו קפה אלקלעי" />
             <p>
-              בית קפה אלקלעי 1 — אירועים פרטיים בשבת,
+              קפה אלקלעי — אירועים פרטיים בשבת,
               <br />
               בלב תל אביב.
             </p>
@@ -16,7 +16,7 @@ export default function Footer() {
             <p>
               אלקלעי 1, תל אביב
               <br />
-              חניון צמוד ונגיש
+              חניון בזל צמוד ונגיש
             </p>
             <p className="footer-links">
               <a
@@ -49,8 +49,8 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <span>אלקלעי 1, תל אביב</span>
-          <span>אירועים פרטיים עד 50 איש</span>
+          <span>קפה אלקלעי · אלקלעי 1, תל אביב</span>
+          <span>אירועים פרטיים עד 60 איש</span>
         </div>
       </div>
     </footer>

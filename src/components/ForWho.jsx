@@ -30,7 +30,7 @@ export default function ForWho() {
           <h2>כל סיבה טובה לשבת אחת</h2>
           <p className="lead">
             אנחנו מארחים אירועים פרטיים בשבת בלבד — בוקר, צהריים או ערב. קבוצות עד
-            50 איש.
+            60 איש.
           </p>
         </header>
         <div className="forwho-grid">

@@ -5,8 +5,8 @@ const PHOTOS = [
   { src: '/assets/event-2.jpg', alt: 'שולחן כיבוד עשיר באירוע פרטי', cls: 'g-b' },
   { src: '/assets/event-3.jpg', alt: 'מגשי דליקטסים וסלטים', cls: 'g-c' },
   { src: '/assets/event-5.jpg', alt: 'מאפים ולחמים טריים לאירוע', cls: 'g-d' },
-  { src: '/assets/event-9.jpg', alt: 'הבר והפנים של בית קפה אלקלעי 1', cls: 'g-e' },
-  { src: '/assets/event-8.jpg', alt: 'אווירת מסיבה בבית קפה אלקלעי 1', cls: 'g-f' },
+  { src: '/assets/event-9.jpg', alt: 'הבר והפנים של קפה אלקלעי', cls: 'g-e' },
+  { src: '/assets/event-8.jpg', alt: 'אווירת מסיבה בקפה אלקלעי', cls: 'g-f' },
   { src: '/assets/event-6.jpg', alt: 'שולחן בופה ארוך תחת אורות בחצר בית הקפה', cls: 'g-g' },
 ]
 

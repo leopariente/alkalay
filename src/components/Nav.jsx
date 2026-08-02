@@ -14,9 +14,9 @@ export default function Nav() {
     <header className={`nav${scrolled ? ' scrolled' : ''}`}>
       <div className="nav-inner">
         <a className="nav-brand" href="#top">
-          <img src="/assets/logo.jpg" alt="לוגו בית קפה אלקלעי 1" />
+          <img src="/assets/logo.jpg" alt="לוגו קפה אלקלעי" />
           <span>
-            <b>אַלְקַלְעִי 1</b>
+            <b>קָפֶה אַלְקַלְעִי</b>
             <small>תל אביב</small>
           </span>
         </a>
@@ -26,9 +26,6 @@ export default function Nav() {
           </a>
           <a className="nav-link" href="#menu">
             התפריט
-          </a>
-          <a className="nav-link" href="#gallery">
-            גלריה
           </a>
           <a className="btn btn-primary" href="#leadform">
             דברו איתנו
