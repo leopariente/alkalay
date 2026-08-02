@@ -33,7 +33,7 @@ export default function Hero() {
             מה על השולחן
           </a>
         </div>
-        <ul className="hero-facts">
+        <ul className="hero-facts" aria-label="פרטי האירוע בקצרה">
           {FACTS.map((fact) => (
             <li key={fact.label}>
               <b>{fact.value}</b>

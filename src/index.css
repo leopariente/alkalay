@@ -141,7 +141,7 @@ a {
 }
 
 section {
-  padding: 116px 0;
+  padding: 48px 0;
 }
 
 /* ---------- shared type ---------- */
@@ -330,12 +330,12 @@ section {
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  padding: 0 0 96px;
+  padding: 0 0 24px;
 }
 
 .hero-content {
   width: 100%;
-  padding: 148px 32px 0;
+  padding: 124px 32px 0;
   max-width: 1160px;
   margin: 0 auto;
 }
@@ -418,7 +418,12 @@ section {
 /* ---------- section headers ---------- */
 .section-head {
   max-width: 720px;
-  margin-bottom: 66px;
+  margin-bottom: 32px;
+}
+
+/* header with only an eyebrow — no extra stacked space */
+.section-head > .eyebrow:only-child {
+  margin-bottom: 0;
 }
 
 /* ---------- Why (numbered rows) ---------- */
@@ -759,7 +764,7 @@ section {
 .footer {
   background: var(--espresso);
   color: rgba(255, 255, 255, 0.66);
-  padding: 74px 0 40px;
+  padding: 54px 0 34px;
   font-size: 0.94rem;
   font-weight: 300;
 }
@@ -870,7 +875,10 @@ section {
 
 @media (max-width: 860px) {
   section {
-    padding: 78px 0;
+    padding: 36px 0;
+  }
+  .section-head {
+    margin-bottom: 26px;
   }
   .container,
   .hero-content,
@@ -947,10 +955,10 @@ section {
     display: none;
   }
   .hero {
-    padding-bottom: 60px;
+    padding-bottom: 44px;
   }
   .hero-content {
-    padding-top: 116px;
+    padding-top: 96px;
   }
   .hero-actions .btn {
     flex: 1 1 100%;

@@ -23,10 +23,6 @@ export default function WhyUs() {
       <div className="container">
         <header className="section-head reveal">
           <span className="eyebrow">למה לחגוג אצלנו</span>
-          <h2>מקום אחד שעושה את כל העבודה</h2>
-          <p className="lead">
-            אתם מביאים את האנשים ואת הסיבה למסיבה. כל השאר — עלינו.
-          </p>
         </header>
         <div className="why-list">
           {ITEMS.map((item, index) => (
