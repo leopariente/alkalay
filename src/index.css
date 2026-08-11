@@ -279,8 +279,8 @@ section {
 }
 
 .nav-brand img {
-  width: 84px;
-  height: 84px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
   object-fit: cover;
   background: var(--paper);
@@ -288,8 +288,8 @@ section {
 }
 
 .nav.scrolled .nav-brand img {
-  width: 60px;
-  height: 60px;
+  width: 52px;
+  height: 52px;
 }
 
 .nav-link {
@@ -387,7 +387,7 @@ section {
 .hero-strip {
   list-style: none;
   padding: 0 32px;
-  margin: 54px auto 0;
+  margin: 32px auto 0;
   max-width: 1160px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -418,6 +418,10 @@ section {
 }
 
 /* ---------- Why (numbered rows) ---------- */
+#why {
+  padding-top: 24px;
+}
+
 .why-list {
   border-top: 1px solid var(--hair);
 }
@@ -457,6 +461,7 @@ section {
 .menu {
   background: var(--paper);
   border-block: 1px solid var(--hair);
+  padding-top: 24px;
 }
 
 .split {
@@ -881,12 +886,12 @@ section {
     display: none;
   }
   .nav-brand img {
-    width: 64px;
-    height: 64px;
+    width: 56px;
+    height: 56px;
   }
   .nav.scrolled .nav-brand img {
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 42px;
   }
   .why-row {
     grid-template-columns: 46px 1fr;
@@ -964,7 +969,7 @@ section {
   }
   .hero-strip {
     grid-template-columns: 1fr;
-    margin-top: 38px;
+    margin-top: 24px;
     gap: 10px;
   }
   .hero-strip img {
