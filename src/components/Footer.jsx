@@ -37,7 +37,6 @@ export default function Footer() {
             </p>
           </div>
           <div>
-            <h3>דברו איתנו</h3>
             <p>
               <a href="tel:036041260">03-6041260</a>
             </p>

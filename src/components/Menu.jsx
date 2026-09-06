@@ -23,7 +23,6 @@ export default function Menu() {
     <section className="menu" id="menu" ref={ref}>
       <div className="container split">
         <div className="reveal">
-          <span className="eyebrow">הקונספט הקולינרי</span>
           <h2>תפריט שנבנה יחד איתכם</h2>
           <p className="lead">
             אנחנו בונים יחד אתכם תפריט אישי ומדויק, המבוסס על חומרי הגלם הטריים

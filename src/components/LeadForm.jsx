@@ -88,7 +88,7 @@ export default function LeadForm() {
       <div className="container form-wrap">
         <div className="form-side reveal">
           <span className="eyebrow">נדבר?</span>
-          <h2>השאירו פרטים — ונחזור אליכם במייל</h2>
+          <h2>השאירו פרטים — ונחזור אליכם </h2>
         </div>
 
         <div className="form-card reveal">
@@ -121,7 +121,7 @@ export default function LeadForm() {
                   type="text"
                   ref={nameRef}
                   autoComplete="name"
-                  placeholder="איך קוראים לכם?"
+                  placeholder="ישראל ישראלי"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   aria-invalid={Boolean(errors.name)}
