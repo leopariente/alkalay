@@ -11,9 +11,8 @@ export default function WhyUs() {
           <span className="eyebrow">למה לחגוג אצלנו</span>
         </header>
         <div className="why-list">
-          {WHY_ITEMS.map((item, index) => (
+          {WHY_ITEMS.map((item) => (
             <article className="why-row reveal" id={item.id} key={item.title}>
-              <span className="why-num">{String(index + 1).padStart(2, '0')}</span>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </article>
