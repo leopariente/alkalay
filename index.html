@@ -1,26 +1,66 @@
 <!doctype html>
-<html lang="he" dir="rtl">
+<html lang="he" dir="rtl" class="no-js">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpeg" href="/assets/logo.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>קפה אלקלעי | אירועים פרטיים בשבת בלב תל אביב</title>
+
+    <!-- כתובות מוחלטות: מקור האמת הוא SITE_URL ב-src/site.js.
+         scripts/prerender.js דורס אותן בבנייה, כך שהחלפת דומיין = שורה אחת שם. -->
+    <link rel="canonical" href="https://alkalay.vercel.app/" />
+
+    <title>אירועים פרטיים בתל אביב | קפה אלקלעי</title>
     <meta
       name="description"
-      content="קפה אלקלעי בתל אביב — ימי הולדת, מסיבות פרטיות ואירועים אינטימיים עד 60 איש. שבתות בלבד, תפריט בהתאמה אישית, יין ובירה מהחבית וחניון בזל צמוד."
+      content="אירועים פרטיים בשבת בקפה אלקלעי תל אביב — עד 60 איש, תפריט בהתאמה אישית, יין ובירה מהחבית וחניון צמוד. השאירו פרטים ונחזור אליכם."
     />
-    <meta property="og:title" content="קפה אלקלעי | אירועים פרטיים בשבת" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="theme-color" content="#9e1b4c" />
+
+    <!-- רמזים מקומיים -->
+    <meta name="geo.region" content="IL-TA" />
+    <meta name="geo.placename" content="תל אביב" />
+    <meta name="geo.position" content="32.0909639;34.7795864" />
+    <meta name="ICBM" content="32.0909639, 34.7795864" />
+
+    <!-- Open Graph — כתובת התמונה חייבת להיות מוחלטת, אחרת אין תצוגה מקדימה בוואטסאפ -->
+    <meta property="og:type" content="business.business" />
+    <meta property="og:site_name" content="קפה אלקלעי" />
+    <meta property="og:locale" content="he_IL" />
+    <meta property="og:url" content="https://alkalay.vercel.app/" />
+    <meta property="og:title" content="אירועים פרטיים בתל אביב | קפה אלקלעי" />
     <meta
       property="og:description"
       content="אירועים פרטיים בשבת בלב תל אביב — עד 60 איש, תפריט בהתאמה אישית וחניון צמוד."
     />
-    <meta property="og:image" content="/assets/event-1.jpg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
+    <meta property="og:image" content="https://alkalay.vercel.app/assets/og-cover.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="אירוע פרטי בקפה אלקלעי, תל אביב" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="אירועים פרטיים בתל אביב | קפה אלקלעי" />
+    <meta
+      name="twitter:description"
+      content="אירועים פרטיים בשבת בלב תל אביב — עד 60 איש, תפריט בהתאמה אישית וחניון צמוד."
     />
+    <meta name="twitter:image" content="https://alkalay.vercel.app/assets/og-cover.jpg" />
+
+    <link rel="icon" type="image/jpeg" href="/assets/logo.jpg" />
+    <link rel="apple-touch-icon" href="/assets/logo.jpg" />
+
+    <!-- Rubik מארח עצמית (ראו @font-face ב-src/index.css). העברית היא מה שמעל הקיפול. -->
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/fonts/rubik-hebrew.woff2"
+      crossorigin
+    />
+
+    <script>
+      // מסיר no-js מיד; בלי JS הכלל .no-js .reveal משאיר את התוכן גלוי.
+      document.documentElement.classList.remove('no-js')
+    </script>
   </head>
   <body>
     <div id="root"></div>

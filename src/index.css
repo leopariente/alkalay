@@ -1,3 +1,27 @@
+/* ---------- פונטים מארחים עצמית ----------
+   Rubik כקובץ משתנה (משקלים 300–600) בשני תת-קבוצות בלבד: עברית + לטינית.
+   מארחים עצמית כדי לחסוך שתי חיבורי צד-שלישי ואת סבב הרשת החוסם רינדור.
+   לעדכון: להוריד מחדש מ-fonts.gstatic.com ולהחליף את הקבצים ב-public/fonts/. */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: swap;
+  src: url('/fonts/rubik-hebrew.woff2') format('woff2');
+  unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: swap;
+  src: url('/fonts/rubik-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
 :root {
   --cream: #f2ece0;
   --cream-deep: #eae1d1;
@@ -12,13 +36,20 @@
 
   /* טיפוגרפיה — בהשראת גלריה דובנוב (Blender + Quicksand).
      Blender הוא פונט מסחרי של Fontef; Rubik הוא התחליף החופשי הקרוב ביותר.
+     Quicksand הוסר: Rubik מכסה עברית ולטינית, וזה חסך משפחה שלמה בטעינה.
      יש רישיון ל-Blender? להטמיע @font-face ולהחליף כאן ל: 'Blender', 'Rubik', ... */
-  --font-hebrew: 'Rubik', 'Quicksand', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-display: 'Rubik', 'Quicksand', system-ui, sans-serif;
+  --font-hebrew: 'Rubik', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Rubik', system-ui, sans-serif;
 }
 
 * {
   box-sizing: border-box;
+}
+
+/* לכל <img> יש עכשיו width/height מפורשים (מונע קפיצת פריסה). בלי height:auto
+   הדפדפן היה מכבד את גובה התכונה כרמז סגנוני ומותח את התמונה. */
+img {
+  height: auto;
 }
 
 html {
@@ -151,7 +182,13 @@ section {
   font-weight: 600;
   letter-spacing: 0.28em;
   color: var(--wine);
-  margin-bottom: 22px;
+  margin: 0 0 22px;
+}
+
+/* <picture> עוטף כל תמונה (WebP + fallback). display:contents משאיר את ה-<img>
+   כילד ישיר של הפריסה, כך שכל כללי הרוחב הקיימים ממשיכים לחול. */
+picture {
+  display: contents;
 }
 
 .lead {
@@ -858,6 +895,13 @@ section {
 }
 
 /* ---------- reveal ---------- */
+/* בלי JS (וגם לזחלנים שלא מריצים סקריפטים) התוכן חייב להיראות — ראו no-js ב-index.html. */
+.no-js .reveal {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(22px);

@@ -22,18 +22,40 @@ export const HERO_FACTS = [
   { value: 'חניון', label: 'חניון בזל הסמוך' },
 ]
 
+// כל תמונה: base ללא סיומת (JPG כ-fallback, WebP ב-600/1200 מ-scripts/optimize-images.js),
+// ומידות מפורשות למניעת קפיצת פריסה. שמות הקבצים תיאוריים בשביל חיפוש תמונות בגוגל.
 export const HERO_PHOTOS = [
   {
-    src: '/assets/event-10.jpg',
+    base: '/assets/alkalay-event-wine-ice-bucket',
     alt: 'דלי קרח עם בקבוקי יין ופרוסקו באירוע בקפה אלקלעי',
+    width: 1200,
+    height: 900,
     eager: true,
   },
-  { src: '/assets/event-4.jpg', alt: 'אורחים באירוע ערב בחצר בית הקפה' },
   {
-    src: '/assets/event-1.jpg',
+    base: '/assets/alkalay-event-evening-courtyard',
+    alt: 'אורחים באירוע ערב בחצר בית הקפה',
+    width: 1200,
+    height: 900,
+  },
+  {
+    base: '/assets/alkalay-event-table-spread',
     alt: 'שולחן אירוח עם סלטים, דליקטסים ומאפים בקפה אלקלעי',
+    width: 1200,
+    height: 900,
   },
 ]
+
+// שלוש עמודות ברוחב מלא עד 1160px, עמודה אחת מתחת ל-700px.
+export const HERO_PHOTO_SIZES = '(max-width: 700px) calc(100vw - 44px), 356px'
+
+export const LOGO_PHOTO = {
+  base: '/assets/logo',
+  alt: 'לוגו קפה אלקלעי',
+  width: 62,
+  height: 62,
+  widths: [600],
+}
 
 /* ---------- למה אצלנו ---------- */
 
@@ -77,11 +99,11 @@ export const FORWHO_ITEMS = [
 /* ---------- גלריה ---------- */
 
 export const GALLERY_PHOTOS = [
-  { src: '/assets/event-4.jpg', alt: 'אורחים באירוע ערב בחצר בית הקפה', cls: 'g-a' },
-  { src: '/assets/event-2.jpg', alt: 'שולחן כיבוד עשיר באירוע פרטי', cls: 'g-b' },
-  { src: '/assets/event-3.jpg', alt: 'מגשי דליקטסים וסלטים', cls: 'g-c' },
-  { src: '/assets/event-5.jpg', alt: 'מאפים ולחמים טריים לאירוע', cls: 'g-d' },
-  { src: '/assets/event-9.jpg', alt: 'הבר והפנים של קפה אלקלעי', cls: 'g-e' },
-  { src: '/assets/event-8.jpg', alt: 'אווירת מסיבה בקפה אלקלעי', cls: 'g-f' },
-  { src: '/assets/event-6.jpg', alt: 'שולחן בופה ארוך תחת אורות בחצר בית הקפה', cls: 'g-g' },
+  { base: '/assets/alkalay-event-evening-courtyard', alt: 'אורחים באירוע ערב בחצר בית הקפה', width: 1200, height: 1600, cls: 'g-a' },
+  { base: '/assets/alkalay-event-buffet-table', alt: 'שולחן כיבוד עשיר באירוע פרטי', width: 1200, height: 1600, cls: 'g-b' },
+  { base: '/assets/alkalay-event-platters', alt: 'מגשי דליקטסים וסלטים', width: 1200, height: 1600, cls: 'g-c' },
+  { base: '/assets/alkalay-event-pastries', alt: 'מאפים ולחמים טריים לאירוע', width: 1200, height: 1600, cls: 'g-d' },
+  { base: '/assets/alkalay-cafe-bar-interior', alt: 'הבר והפנים של קפה אלקלעי', width: 1200, height: 1600, cls: 'g-e' },
+  { base: '/assets/alkalay-event-party', alt: 'אווירת מסיבה בקפה אלקלעי', width: 1200, height: 1600, cls: 'g-f' },
+  { base: '/assets/alkalay-event-buffet-lights', alt: 'שולחן בופה ארוך תחת אורות בחצר בית הקפה', width: 1200, height: 1600, cls: 'g-g' },
 ]

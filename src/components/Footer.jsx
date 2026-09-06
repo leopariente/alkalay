@@ -1,10 +1,13 @@
+import Photo from './Photo.jsx'
+import { LOGO_PHOTO } from '../constants.js'
+
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer-inner">
           <div>
-            <img src="/assets/logo.jpg" alt="לוגו קפה אלקלעי" />
+            <Photo photo={LOGO_PHOTO} sizes="62px" />
             <p>
               קפה אלקלעי — אירועים פרטיים בשבת,
               <br />

@@ -1,4 +1,5 @@
-import { HERO_FACTS, HERO_PHOTOS } from '../constants.js'
+import Photo from './Photo.jsx'
+import { HERO_FACTS, HERO_PHOTOS, HERO_PHOTO_SIZES } from '../constants.js'
 
 export default function Hero() {
   return (
@@ -22,12 +23,8 @@ export default function Hero() {
       </div>
       <ul className="hero-strip">
         {HERO_PHOTOS.map((photo) => (
-          <li key={photo.src}>
-            <img
-              src={photo.src}
-              alt={photo.alt}
-              loading={photo.eager ? 'eager' : 'lazy'}
-            />
+          <li key={photo.base}>
+            <Photo photo={photo} sizes={HERO_PHOTO_SIZES} eager={photo.eager} />
           </li>
         ))}
       </ul>

@@ -8,7 +8,7 @@ export default function WhyUs() {
     <section id="why" ref={ref}>
       <div className="container">
         <header className="section-head reveal">
-          <span className="eyebrow">למה לחגוג אצלנו</span>
+          <h2 className="eyebrow">למה לחגוג אצלנו</h2>
         </header>
         <div className="why-list">
           {WHY_ITEMS.map((item) => (

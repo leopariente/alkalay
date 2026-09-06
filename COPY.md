@@ -13,7 +13,7 @@
 
 **תגיות:** עד 60 אורחים · שבת: בוקר · צהריים · ערב · פנים וחוץ: ישיבה ועמידה · חניון בזל הסמוך
 
-**שלוש תמונות** מתחת לכותרת (במקום תמונת רקע): event-10, event-4, event-8.
+**שלוש תמונות** מתחת לכותרת (במקום תמונת רקע): alkalay-event-wine-ice-bucket, alkalay-event-evening-courtyard, alkalay-event-table-spread.
 
 ---
 

@@ -86,7 +86,6 @@ export default function LeadForm() {
     <section className="lead-section" id="leadform" ref={ref}>
       <div className="container form-wrap">
         <div className="form-side reveal">
-          <span className="eyebrow">נדבר?</span>
           <h2>השאירו פרטים — ונחזור אליכם </h2>
         </div>
 

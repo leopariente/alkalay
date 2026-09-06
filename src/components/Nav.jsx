@@ -14,7 +14,12 @@ export default function Nav() {
     <header className={`nav${scrolled ? ' scrolled' : ''}`}>
       <div className="nav-inner">
         <a className="nav-brand" href="#top" aria-label="קפה אלקלעי תל אביב — לראש העמוד">
-          <img src="/assets/logo.jpg" alt="קפה אלקלעי תל אביב" />
+          <img
+            src="/assets/logo.jpg"
+            alt="קפה אלקלעי תל אביב"
+            width="64"
+            height="64"
+          />
         </a>
         <nav className="nav-links">
           <a className="nav-link" href="#why">
