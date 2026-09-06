@@ -21,10 +21,6 @@ export default function Hero() {
       <div className="hero-content">
         <span className="eyebrow">קפה אלקלעי · תל אביב</span>
         <h1>אירועים פרטיים עד 60 איש אצלנו בקפה אלקלעי בשבת</h1>
-        <p className="lead">
-          אם אתם מחפשים את האירוע האינטימי והלא פורמלי — כזה שבו האורחים מרגישים
-          בבית מהרגע הראשון — נשמח לארח אתכם אצלנו בשבת.
-        </p>
         <div className="hero-actions">
           <a className="btn btn-primary" href="#leadform">
             השאירו פרטים

@@ -638,10 +638,16 @@ section {
 }
 
 .form-wrap {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 78px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  align-items: center;
+}
+
+/* הטופס עמודה אחת — מגבילים רוחב כדי שהשדות לא יימתחו על כל המסך. */
+.form-wrap > * {
+  width: 100%;
+  max-width: 620px;
 }
 
 .form-side p.lead {
@@ -681,7 +687,8 @@ section {
   margin-bottom: 10px;
 }
 
-.field input {
+.field input,
+.field textarea {
   width: 100%;
   padding: 10px 0;
   border: 0;
@@ -697,12 +704,14 @@ section {
 
 /* ניגודיות 5.2:1 מול --paper. אין להחזיר שקיפות — טקסט מציין (placeholder)
    כפוף לדרישת 4.5:1 של ת"י 5568 / WCAG 1.4.3. */
-.field input::placeholder {
+.field input::placeholder,
+.field textarea::placeholder {
   color: var(--ink-soft);
   opacity: 1;
 }
 
-.field input:focus {
+.field input:focus,
+.field textarea:focus {
   border-bottom-color: var(--wine);
   border-bottom-width: 2px;
   padding-bottom: 9px;
@@ -714,9 +723,20 @@ section {
   margin: 8px 0 0;
 }
 
+.field textarea {
+  resize: vertical;
+  min-height: 76px;
+  line-height: 1.6;
+}
+
 .form-card .btn {
   width: 100%;
   margin-top: 8px;
+}
+
+.form-card .btn[disabled] {
+  opacity: 0.65;
+  cursor: progress;
 }
 
 .form-note {
@@ -855,8 +875,7 @@ section {
 @media (max-width: 1000px) {
   .split,
   .form-wrap {
-    grid-template-columns: 1fr;
-    gap: 44px;
+    gap: 28px;
   }
   .frame::after {
     display: none;
