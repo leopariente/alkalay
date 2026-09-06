@@ -1,15 +1,5 @@
 import useReveal from '../hooks/useReveal.js'
-
-const ITEMS = [
-  {
-    title: 'אווירה של שבת בתל אביב',
-    text: 'שבת בעיר — שילוב בין שיק אורבני לחמימות שכונתית, מוזיקה נעימה, אור טבעי ואנשים שמסתובבים בין השולחנות — בדיוק כמו שבת טובה, רק שהמקום כולו שלכם.',
-  },
-  {
-    title: 'עד 60 איש, בפנים ובחוץ',
-    text: 'שילוב זורם של ישיבה ועמידה שמייצר אווירת מינגלינג מושלמת וקלילה. אינטימי מספיק כדי שכולם ידברו, גדול מספיק בשביל מסיבה אמיתית.',
-  },
-]
+import { WHY_ITEMS } from '../constants.js'
 
 export default function WhyUs() {
   const ref = useReveal()
@@ -21,7 +11,7 @@ export default function WhyUs() {
           <span className="eyebrow">למה לחגוג אצלנו</span>
         </header>
         <div className="why-list">
-          {ITEMS.map((item, index) => (
+          {WHY_ITEMS.map((item, index) => (
             <article className="why-row reveal" key={item.title}>
               <span className="why-num">{String(index + 1).padStart(2, '0')}</span>
               <h3>{item.title}</h3>

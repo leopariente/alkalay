@@ -1,14 +1,5 @@
 import useReveal from '../hooks/useReveal.js'
-
-const PHOTOS = [
-  { src: '/assets/event-4.jpg', alt: 'אורחים באירוע ערב בחצר בית הקפה', cls: 'g-a' },
-  { src: '/assets/event-2.jpg', alt: 'שולחן כיבוד עשיר באירוע פרטי', cls: 'g-b' },
-  { src: '/assets/event-3.jpg', alt: 'מגשי דליקטסים וסלטים', cls: 'g-c' },
-  { src: '/assets/event-5.jpg', alt: 'מאפים ולחמים טריים לאירוע', cls: 'g-d' },
-  { src: '/assets/event-9.jpg', alt: 'הבר והפנים של קפה אלקלעי', cls: 'g-e' },
-  { src: '/assets/event-8.jpg', alt: 'אווירת מסיבה בקפה אלקלעי', cls: 'g-f' },
-  { src: '/assets/event-6.jpg', alt: 'שולחן בופה ארוך תחת אורות בחצר בית הקפה', cls: 'g-g' },
-]
+import { GALLERY_PHOTOS } from '../constants.js'
 
 export default function Gallery() {
   const ref = useReveal()
@@ -22,7 +13,7 @@ export default function Gallery() {
           <p className="lead">אירועים אמיתיים שהתארחו כאן בשבת.</p>
         </header>
         <div className="gallery-grid reveal">
-          {PHOTOS.map((photo) => (
+          {GALLERY_PHOTOS.map((photo) => (
             <figure className={photo.cls} key={photo.src}>
               <img src={photo.src} alt={photo.alt} loading="lazy" />
             </figure>

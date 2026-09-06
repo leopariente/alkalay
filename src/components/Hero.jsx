@@ -1,19 +1,4 @@
-const FACTS = [
-  { value: 'עד 60', label: 'אורחים' },
-  { value: 'שבת', label: 'בוקר · צהריים · ערב' },
-  { value: 'פנים וחוץ', label: 'ישיבה ועמידה' },
-  { value: 'חניון', label: 'חניון בזל הסמוך' },
-]
-
-const PHOTOS = [
-  {
-    src: '/assets/event-10.jpg',
-    alt: 'דלי קרח עם בקבוקי יין ופרוסקו באירוע בקפה אלקלעי',
-    eager: true,
-  },
-  { src: '/assets/event-4.jpg', alt: 'אורחים באירוע ערב בחצר בית הקפה' },
-  { src: '/assets/event-8.jpg', alt: 'אווירת מסיבה בקפה אלקלעי' },
-]
+import { HERO_FACTS, HERO_PHOTOS } from '../constants.js'
 
 export default function Hero() {
   return (
@@ -30,7 +15,7 @@ export default function Hero() {
           </a>
         </div>
         <ul className="hero-facts" aria-label="פרטי האירוע בקצרה">
-          {FACTS.map((fact) => (
+          {HERO_FACTS.map((fact) => (
             <li key={fact.label}>
               <b>{fact.value}</b>
               <span>{fact.label}</span>
@@ -39,7 +24,7 @@ export default function Hero() {
         </ul>
       </div>
       <ul className="hero-strip">
-        {PHOTOS.map((photo) => (
+        {HERO_PHOTOS.map((photo) => (
           <li key={photo.src}>
             <img
               src={photo.src}

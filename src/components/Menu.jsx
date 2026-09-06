@@ -1,20 +1,5 @@
 import useReveal from '../hooks/useReveal.js'
-
-const ROWS = [
-  {
-    label: 'מהמאפייה שלנו',
-    text: 'לחמים טריים ומאפי בוטיק מניחוחות הקונדיטוריה המקומית.',
-  },
-  { label: 'רעננות בצלחת', text: 'מבחר סלטים טריים, צבעוניים ועשירים.' },
-  {
-    label: 'דליקטסים ומגשי אירוח',
-    text: 'צלחות של גבינות משובחות, דגים מעושנים ונקניקי איכות.',
-  },
-  {
-    label: 'על הבר',
-    text: 'יין איכותי ממבחר היינות שלנו, בירה צוננת מהחבית וכמובן — קפה איטלקי מובחר.',
-  },
-]
+import { MENU_ROWS } from '../constants.js'
 
 export default function Menu() {
   const ref = useReveal()
@@ -29,7 +14,7 @@ export default function Menu() {
             והאיכותיים של בית הקפה:
           </p>
           <ul className="menu-list">
-            {ROWS.map((row) => (
+            {MENU_ROWS.map((row) => (
               <li key={row.label}>
                 <b>{row.label}</b>
                 <span>{row.text}</span>

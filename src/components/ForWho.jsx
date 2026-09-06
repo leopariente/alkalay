@@ -1,23 +1,5 @@
 import useReveal from '../hooks/useReveal.js'
-import { CakeIcon, GlassesIcon, DoveIcon } from './icons.jsx'
-
-const ITEMS = [
-  {
-    Icon: CakeIcon,
-    title: 'ימי הולדת',
-    text: 'עגול, לא עגול — לא משנה. בוקר של קפה ומאפים, צהריים ארוכים או ערב עם בירה מהחבית והרמת כוסית.',
-  },
-  {
-    Icon: GlassesIcon,
-    title: 'מסיבות פרטיות',
-    text: 'מסיבת הפתעה, חגיגת סיום, מפגש חברים או משפחה. אתם מביאים פלייליסט — אנחנו את המקום.',
-  },
-  {
-    Icon: DoveIcon,
-    title: 'אירועים אינטימיים',
-    text: 'בריתות, אירוסין קטנים, מפגשי משפחה או ערב לכבוד מישהו. אירוח חם בלי הפקה גדולה.',
-  },
-]
+import { FORWHO_ITEMS } from '../constants.js'
 
 export default function ForWho() {
   const ref = useReveal()
@@ -34,7 +16,7 @@ export default function ForWho() {
           </p>
         </header>
         <div className="forwho-grid">
-          {ITEMS.map(({ Icon, title, text }) => (
+          {FORWHO_ITEMS.map(({ Icon, title, text }) => (
             <article className="forwho-item reveal" key={title}>
               <Icon />
               <h3>{title}</h3>
