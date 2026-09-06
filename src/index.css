@@ -457,38 +457,13 @@ section {
   max-width: 52ch;
 }
 
-/* ---------- Menu ---------- */
-.menu {
-  background: var(--paper);
-  border-block: 1px solid var(--hair);
-  padding-top: 24px;
+/* רשימת התפריט יושבת בעמודת הטקסט של השורה, מתחת לפסקה. */
+.why-row .menu-list {
+  grid-column: 3;
+  margin: 18px 0 0;
 }
 
-.split {
-  display: grid;
-  grid-template-columns: 1.02fr 1fr;
-  gap: 78px;
-  align-items: center;
-}
-
-.frame {
-  position: relative;
-}
-
-.frame img {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-}
-
-.frame::after {
-  content: '';
-  position: absolute;
-  inset: 18px -18px -18px 18px;
-  border: 1px solid var(--hair);
-  z-index: -1;
-}
-
+/* ---------- Menu list ---------- */
 .menu-list {
   list-style: none;
   padding: 0;
@@ -699,6 +674,11 @@ section {
   grid-template-columns: 84px 1fr;
   align-items: center;
   column-gap: 16px;
+}
+
+/* כוכבית שדה חובה — ויזואלית בלבד, aria-hidden. הסמנטיקה מגיעה מ-required. */
+.req {
+  color: var(--wine);
 }
 
 .field label {
@@ -915,7 +895,6 @@ section {
 
 /* ---------- responsive ---------- */
 @media (max-width: 1000px) {
-  .split,
   .form-wrap {
     gap: 28px;
   }
@@ -930,12 +909,6 @@ section {
   .field .error,
   .field .visually-hidden {
     grid-column: 1;
-  }
-  .frame::after {
-    display: none;
-  }
-  .frame img {
-    aspect-ratio: 4 / 3;
   }
   .footer-inner {
     grid-template-columns: 1fr 1fr;
@@ -965,6 +938,9 @@ section {
   .nav.scrolled .nav-brand img {
     width: 42px;
     height: 42px;
+  }
+  .why-row .menu-list {
+    grid-column: 2;
   }
   .why-row {
     grid-template-columns: 46px 1fr;

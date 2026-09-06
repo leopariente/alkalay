@@ -1,7 +1,6 @@
 import Nav from './components/Nav.jsx'
 import Hero from './components/Hero.jsx'
 import WhyUs from './components/WhyUs.jsx'
-import Menu from './components/Menu.jsx'
 import LeadForm from './components/LeadForm.jsx'
 import Footer from './components/Footer.jsx'
 import StickyCta from './components/StickyCta.jsx'
@@ -16,7 +15,6 @@ export default function App() {
       <main id="main" tabIndex={-1}>
         <Hero />
         <WhyUs />
-        <Menu />
         <LeadForm />
       </main>
       <Footer />

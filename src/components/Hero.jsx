@@ -10,9 +10,6 @@ export default function Hero() {
           <a className="btn btn-primary" href="#leadform">
             השאירו פרטים
           </a>
-          <a className="btn btn-ghost" href="#menu">
-            מה על השולחן
-          </a>
         </div>
         <ul className="hero-facts" aria-label="פרטי האירוע בקצרה">
           {HERO_FACTS.map((fact) => (

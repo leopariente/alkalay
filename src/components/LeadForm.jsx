@@ -120,9 +120,12 @@ export default function LeadForm() {
               <div className="form-grid">
                 <div className="form-fields">
                   <div className="field">
-                    <label htmlFor="name">שם מלא</label>
+                    <label htmlFor="name">
+                      שם מלא <span className="req" aria-hidden="true">*</span>
+                    </label>
                     <input
                       id="name"
+                    required
                       name="name"
                       type="text"
                       ref={nameRef}
@@ -141,9 +144,12 @@ export default function LeadForm() {
                   </div>
 
                   <div className="field">
-                    <label htmlFor="email">אימייל</label>
+                    <label htmlFor="email">
+                      אימייל <span className="req" aria-hidden="true">*</span>
+                    </label>
                     <input
                       id="email"
+                    required
                       name="email"
                       type="email"
                       ref={emailRef}
@@ -165,9 +171,12 @@ export default function LeadForm() {
                   </div>
 
                   <div className="field">
-                    <label htmlFor="phone">טלפון</label>
+                    <label htmlFor="phone">
+                      טלפון <span className="req" aria-hidden="true">*</span>
+                    </label>
                     <input
                       id="phone"
+                    required
                       name="phone"
                       type="tel"
                       ref={phoneRef}
@@ -193,7 +202,7 @@ export default function LeadForm() {
                 </div>
 
                 <div className="field field-message">
-                  <label htmlFor="message">מה חוגגים? (לא חובה)</label>
+                  <label htmlFor="message">מה חוגגים?</label>
                   <textarea
                     id="message"
                     name="message"

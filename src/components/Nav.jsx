@@ -20,9 +20,6 @@ export default function Nav() {
           <a className="nav-link" href="#why">
             למה אצלנו
           </a>
-          <a className="nav-link" href="#menu">
-            התפריט
-          </a>
           <a className="btn btn-primary" href="#leadform">
             דברו איתנו
           </a>

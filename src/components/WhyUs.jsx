@@ -12,7 +12,7 @@ export default function WhyUs() {
         </header>
         <div className="why-list">
           {WHY_ITEMS.map((item, index) => (
-            <article className="why-row reveal" key={item.title}>
+            <article className="why-row reveal" id={item.id} key={item.title}>
               <span className="why-num">{String(index + 1).padStart(2, '0')}</span>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
