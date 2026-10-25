@@ -26,9 +26,11 @@ for (const file of files) {
   const input = join(ASSETS, file)
   const meta = await sharp(input).metadata()
 
-  for (const width of WIDTHS) {
-    // לא מגדילים תמונה מעבר לרזולוציית המקור.
-    if (meta.width && width > meta.width) continue
+  // לא מגדילים תמונה מעבר לרזולוציית המקור — מקור צר יותר מקבל גרסה ברוחב המקורי.
+  const widths = WIDTHS.filter((w) => !meta.width || w <= meta.width)
+  if (meta.width && meta.width < WIDTHS.at(-1)) widths.push(meta.width)
+
+  for (const width of widths) {
     const out = join(ASSETS, `${name}-${width}.webp`)
     await sharp(input).resize({ width }).webp({ quality: 74 }).toFile(out)
     const { size } = await stat(out)

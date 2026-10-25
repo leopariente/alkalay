@@ -27,22 +27,28 @@ export const HERO_FACTS = [
 export const HERO_PHOTOS = [
   {
     base: '/assets/alkalay-event-wine-ice-bucket',
-    alt: 'דלי קרח עם בקבוקי יין ופרוסקו באירוע בקפה אלקלעי',
+    alt: 'דלי קרח עם בקבוקי יין לאור מנורה באירוע בקפה אלקלעי',
     width: 1200,
     height: 900,
+    widths: [600, 900],
+    position: 'center 62%',
     eager: true,
   },
   {
-    base: '/assets/alkalay-event-evening-courtyard',
-    alt: 'אורחים באירוע ערב בחצר בית הקפה',
+    base: '/assets/alkalay-event-salad-parmesan',
+    alt: 'סלט ירוק עם פרמזן ומגש פירות באירוע בקפה אלקלעי',
     width: 1200,
     height: 900,
+    widths: [600, 900],
+    position: 'center 80%',
   },
   {
-    base: '/assets/alkalay-event-table-spread',
-    alt: 'שולחן אירוח עם סלטים, דליקטסים ומאפים בקפה אלקלעי',
+    base: '/assets/alkalay-event-garden-buffet',
+    alt: 'שולחן בופה עם סלטים, עלי גפן ופירות על רקע צמחייה בקפה אלקלעי',
     width: 1200,
     height: 900,
+    widths: [600, 900],
+    position: 'center 62%',
   },
 ]
 
