@@ -438,7 +438,7 @@ picture {
 .hero-strip img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
   border-radius: 2px;
 }
@@ -1059,7 +1059,7 @@ picture {
     gap: 10px;
   }
   .hero-strip img {
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 4 / 5;
   }
   .menu-list li {
     grid-template-columns: 1fr;

@@ -26,29 +26,29 @@ export const HERO_FACTS = [
 // ומידות מפורשות למניעת קפיצת פריסה. שמות הקבצים תיאוריים בשביל חיפוש תמונות בגוגל.
 export const HERO_PHOTOS = [
   {
-    base: '/assets/alkalay-event-wine-ice-bucket',
-    alt: 'דלי קרח עם בקבוקי יין לאור מנורה באירוע בקפה אלקלעי',
-    width: 1200,
-    height: 900,
-    widths: [600, 900],
-    position: 'center 62%',
-    eager: true,
-  },
-  {
     base: '/assets/alkalay-event-salad-parmesan',
     alt: 'סלט ירוק עם פרמזן ומגש פירות באירוע בקפה אלקלעי',
-    width: 1200,
-    height: 900,
+    width: 900,
+    height: 1200,
     widths: [600, 900],
-    position: 'center 80%',
+    position: 'center 85%',
+    eager: true,
   },
   {
     base: '/assets/alkalay-event-garden-buffet',
     alt: 'שולחן בופה עם סלטים, עלי גפן ופירות על רקע צמחייה בקפה אלקלעי',
-    width: 1200,
-    height: 900,
+    width: 900,
+    height: 1200,
     widths: [600, 900],
-    position: 'center 62%',
+    position: 'center 70%',
+  },
+  {
+    base: '/assets/alkalay-event-wine-ice-bucket',
+    alt: 'דלי קרח עם בקבוקי יין לאור מנורה באירוע בקפה אלקלעי',
+    width: 900,
+    height: 1200,
+    widths: [600, 900],
+    position: 'center 40%',
   },
 ]
 
